@@ -1,0 +1,477 @@
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for ::1 at 2015-04-09 23:31:18 +0800
+
+ActionController::RoutingError (No route matches [GET] "/courses"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Mosquito/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Mosquito/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Mosquito/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.8ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (30.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (87.8ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (38.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCourses (20150409153203)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "teacher" varchar, "place" varchar, "time" varchar, "credit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150409153203"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/courses" for ::1 at 2015-04-09 23:32:31 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1638ms (Views: 1628.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:32:33 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:32:33 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:32:33 +0800
+
+
+Started GET "/" for ::1 at 2015-04-09 23:34:35 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 94ms (Views: 84.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:34:35 +0800
+
+
+Started GET "/courses/new" for ::1 at 2015-04-09 23:34:40 +0800
+Processing by CoursesController#new as HTML
+  Rendered courses/_form.html.erb (52.0ms)
+  Rendered courses/new.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 114ms (Views: 108.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/courses" for ::1 at 2015-04-09 23:34:46 +0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"giVAvnqWL/Wc19BZhZRpc63Hp68WVbu2GepKzN37Pf8uf8c04bVGs6jtcx86R6aUMrInjbHHihu8hk2G4tOt3Q==", "course"=>{"name"=>"l", "teacher"=>"o", "place"=>"j", "time"=>"ii", "credit"=>"9"}, "commit"=>"Create Course"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("name", "teacher", "place", "time", "credit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "l"], ["teacher", "o"], ["place", "j"], ["time", "ii"], ["credit", "9"], ["created_at", "2015-04-09 15:34:46.965820"], ["updated_at", "2015-04-09 15:34:46.965820"]]
+  [1m[36m (61.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/courses
+Completed 302 Found in 70ms (ActiveRecord: 62.3ms)
+
+
+Started GET "/courses" for ::1 at 2015-04-09 23:34:47 +0800
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:34:47 +0800
+
+
+Started GET "/" for ::1 at 2015-04-09 23:39:44 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (11.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 139ms
+
+SyntaxError (/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:18: syntax error, unexpected keyword_do_block
+...ag courses_path,method:"get",do);@output_buffer.safe_append='
+...                               ^
+/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/courses/index.html.erb:18: syntax error, unexpected keyword_do_block
+  app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/courses/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (44.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (118.7ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 23:39:54 +0800
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.1ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (34.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 23:40:42 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (12.5ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 253ms (Views: 228.5ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:40:43 +0800
+
+
+Started GET "/" for ::1 at 2015-04-09 23:41:08 +0800
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 23:42:29 +0800
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/index.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.8ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 23:42:47 +0800
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Mosquito/railsbridge/coursesearch/app/views/courses/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/index.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.5ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mosquito/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 23:43:25 +0800
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:43:25 +0800
+
+
+Started GET "/" for ::1 at 2015-04-09 23:45:44 +0800
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:45:44 +0800
+
+
+Started GET "/" for ::1 at 2015-04-09 23:51:15 +0800
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:51:15 +0800
+
+
+Started GET "/courses/new" for ::1 at 2015-04-09 23:51:20 +0800
+Processing by CoursesController#new as HTML
+  Rendered courses/_form.html.erb (123.1ms)
+  Rendered courses/new.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 199ms (Views: 198.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/courses" for ::1 at 2015-04-09 23:51:29 +0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AuIZXIJ8dIxAAIQIbgOFIr0Q+k1rHGubX9IJGpOaf4iuuJ7WGV8dynQ6J07R0ErFImV6b8yOWjb6vg5QrLLvqg==", "course"=>{"name"=>"ffff", "teacher"=>"hhh", "place"=>"kl", "time"=>"k", "credit"=>"kl"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (31.5ms)[0m  [1mINSERT INTO "courses" ("name", "teacher", "place", "time", "credit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "ffff"], ["teacher", "hhh"], ["place", "kl"], ["time", "k"], ["credit", "kl"], ["created_at", "2015-04-09 15:51:29.707663"], ["updated_at", "2015-04-09 15:51:29.707663"]]
+  [1m[35m (30.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/courses
+Completed 302 Found in 88ms (ActiveRecord: 62.2ms)
+
+
+Started GET "/courses" for ::1 at 2015-04-09 23:51:29 +0800
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:51:29 +0800
+
+
+Started GET "/courses?name=ffff&teacher=&place=&time=&credit=&commit=search&utf8=%E2%9C%93" for ::1 at 2015-04-09 23:51:34 +0800
+Processing by CoursesController#index as HTML
+  Parameters: {"name"=>"ffff", "teacher"=>"", "place"=>"", "time"=>"", "credit"=>"", "commit"=>"search", "utf8"=>"✓"}
+  [1m[35mCourse Load (0.7ms)[0m  SELECT "courses".* FROM "courses" WHERE (name like '%ffff%')
+  Rendered courses/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:51:34 +0800
+
+
+Started GET "/courses?name=jj&teacher=&place=&time=&credit=&commit=search&utf8=%E2%9C%93" for ::1 at 2015-04-09 23:51:42 +0800
+Processing by CoursesController#index as HTML
+  Parameters: {"name"=>"jj", "teacher"=>"", "place"=>"", "time"=>"", "credit"=>"", "commit"=>"search", "utf8"=>"✓"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE (name like '%jj%')[0m
+  Rendered courses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/courses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/scaffolds-2c76644a28ec06ecde4f55893bfb538e.css?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/application-cb2e3da30603e84798d812286a368373.css?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/courses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 23:51:42 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-04-09 23:51:42 +0800
